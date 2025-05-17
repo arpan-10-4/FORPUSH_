@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraft - All-in-One Coding Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">CodeCraft</a>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coding.html">Problems</a></li>
+                <li><a href="#">Contests</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="post.html">Resources</a></li>
+                <li><a href="faqs.html">About</a></li>
+                <li><a href="#signup" class="btn-primary" id="signup-btn">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sign-Up Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" id="signupFirstName" placeholder="First Name" required>
+                <input type="text" id="signupMiddleName" placeholder="Middle Name (optional)">
+                <input type="text" id="signupLastName" placeholder="Last Name" required>
+                <input type="email" id="signupEmail" placeholder="Email Address" required>
+                <input type="password" id="signupPassword" placeholder="Create Password" required>
+                <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+                <input type="text" id="signupCollege" placeholder="College/University Name" required>
+                <input type="text" id="signupBranch" placeholder="Branch/Department" required>
+                <select id="signupYear" required>
+                    <option value="" disabled selected>Passing Year</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                </select>
+                <button type="submit">Sign Up</button>
+                <p class="login-link">Already have an account? <a href="#" id="openLoginModal">Log In</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email Address" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p class="login-link">Don't have an account? <a href="#" id="openSignupModal">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+     <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeInLeft">
+                <h1>Master Coding with <span>CodeCraft</span></h1>
+                <p>Your all-in-one platform to build strong coding skills, solve real-world problems, and stay ahead in your coding journey.</p>
+                <a href="#signup" class="btn-secondary">Get Started</a>
+            </div>
+            <div class="hero-image animate__animated animate__fadeInRight">
+                <img src="CHARACTER.png" alt="Coding Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose CodeCraft?</h2>
+            <div class="feature-grid">
+                <div class="feature-card animate__animated animate__fadeIn">
+                    <img src="https://img.icons8.com/color/96/000000/book.png" alt="Theory Icon">
+                    <h3>Comprehensive Theory</h3>
+                    <p>Learn with detailed and easy-to-understand theory for all major programming languages and concepts.</p>
+                </div>
+                <div class="feature-card animate__animated animate__fadeIn animate__delay-1s">
+                    <img src="https://img.icons8.com/color/96/000000/code.png" alt="Practice Icon">
+                    <h3>Hands-On Practice</h3>
+                    <p>Practice coding with real-world problems and challenges to enhance your skills.</p>
+                </div>
+                <div class="feature-card animate__animated animate__fadeIn animate__delay-2s">
+                    <img src="https://img.icons8.com/color/96/000000/developer.png" alt="All-in-One Icon">
+                    <h3>All-in-One Platform</h3>
+                    <p>Access everything you need in one place - from theory to practice, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theory Section -->
+    <section id="theory" class="theory">
+        <div class="container">
+            <div class="theory-image">
+                <img src="LEARN THEORY.png" alt="Theory Illustration">
+            </div>
+            <div class="theory-content">
+                <h2>Learn with Comprehensive Theory</h2>
+                <p>Our platform offers detailed theory for all major programming languages, data structures, algorithms, and more.</p>
+                <a href="#signup" class="btn-primary">Explore Theory</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="practice">
+        <div class="container">
+            <div class="practice-image">
+                <img src="CODING PRactice.png" alt="Practice Illustration">
+            </div>
+            <div class="practice-content">
+                <h2>Practice Coding Like a Pro</h2>
+                <p>Sharpen your coding skills with our extensive collection of coding challenges, projects, and real-world problems.</p>
+                <a href="#signup" class="btn-primary">Start Practicing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup" class="signup">
+        <div class="container">
+            <h2>Ready to Master Coding?</h2>
+            <p>Join CodeCraft today and take your coding skills to the next level.</p>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn-secondary">Sign Up Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>About CodeCraft</h3>
+                    <p>CodeCraft is your all-in-one platform to master coding, learn theory, and practice real-world problems.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Home</a></li>
+                        <li><a href="#theory">Problems</a></li>
+                        <li><a href="#practice">Contests</a></li>
+                        <li><a href="#contact">Leaderboard</a></li>
+                        <li><a href="#contact">Resources</a></li>
+                        <li><a href="#contact">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="mailto:info@codecraft.com">info@codecraft.com</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>123 Coding Street, Tech City, World</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#" target="_blank"><img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook"></a></li>
+                        <li><a href="#" target="_blank"><img src="https://img.icons8.com/color/48/000000/twitter.png" alt="Twitter"></a></li>
+                        <li><a href="#" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a></li>
+                        <li><a href="#" target="_blank"><img src="https://img.icons8.com/color/48/000000/instagram.png" alt="Instagram"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeCraft. All rights reserved.</p>
+                <ul class="footer-legal">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    
+
+    <script>
+        // Authentication functions
+        const auth = {
+            users: [],
+            
+            // Load users from localStorage
+            loadUsers: function() {
+                const storedUsers = localStorage.getItem('users');
+                this.users = storedUsers ? JSON.parse(storedUsers) : [];
+            },
+            
+            // Save users to localStorage
+            saveUsers: function() {
+                localStorage.setItem('users', JSON.stringify(this.users));
+            },
+            
+            // Login function
+            login: function(email, password) {
+                const user = this.users.find(u => u.email === email && u.password === password);
+                if (user) {
+                    // Store user data without password
+                    const userData = {
+                        id: user.id,
+                        firstName: user.firstName,
+                        middleName: user.middleName,
+                        lastName: user.lastName,
+                        email: user.email,
+                        college: user.college,
+                        branch: user.branch,
+                        year: user.year
+                    };
+                    localStorage.setItem('currentUser', JSON.stringify(userData));
+                    return true;
+                }
+                return false;
+            },
+            
+            // Logout function
+            logout: function() {
+                localStorage.removeItem('currentUser');
+            },
+            
+            // Check if user is logged in
+            isLoggedIn: function() {
+                return localStorage.getItem('currentUser') !== null;
+            },
+            
+            // Get current user
+            getCurrentUser: function() {
+                return JSON.parse(localStorage.getItem('currentUser'));
+            },
+            
+            // Initialize auth system
+            init: function() {
+                this.loadUsers();
+            }
+        };
+
+        // Initialize auth system
+        auth.init();
+
+        // Get the modals
+        const signupModal = document.getElementById("signupModal");
+        const loginModal = document.getElementById("loginModal");
+
+        // Get the buttons that open the modals
+        const signupBtn = document.getElementById("signup-btn");
+        const openLoginModal = document.getElementById("openLoginModal");
+        const openSignupModal = document.getElementById("openSignupModal");
+
+        // Get the <span> elements that close the modals
+        const closeSignup = signupModal.querySelector(".close");
+        const closeLogin = loginModal.querySelector(".close");
+
+        // Open the sign-up modal
+        signupBtn.onclick = () => {
+            signupModal.style.display = "flex";
+        };
+
+        // Open the login modal from the sign-up modal
+        openLoginModal.onclick = (e) => {
+            e.preventDefault();
+            signupModal.style.display = "none";
+            loginModal.style.display = "flex";
+        };
+
+        // Open the sign-up modal from the login modal
+        openSignupModal.onclick = (e) => {
+            e.preventDefault();
+            loginModal.style.display = "none";
+            signupModal.style.display = "flex";
+        };
+
+        // Close the sign-up modal
+        closeSignup.onclick = () => {
+            signupModal.style.display = "none";
+        };
+
+        // Close the login modal
+        closeLogin.onclick = () => {
+            loginModal.style.display = "none";
+        };
+
+        // Close modals when clicking outside
+        window.onclick = (event) => {
+            if (event.target === signupModal) {
+                signupModal.style.display = "none";
+            }
+            if (event.target === loginModal) {
+                loginModal.style.display = "none";
+            }
+        };
+
+        // Handle sign-up form submission
+        document.getElementById("signupForm").onsubmit = (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const user = {
+                id: auth.users.length + 1,
+                firstName: document.getElementById("signupFirstName").value,
+                middleName: document.getElementById("signupMiddleName").value || '',
+                lastName: document.getElementById("signupLastName").value,
+                email: document.getElementById("signupEmail").value,
+                password: document.getElementById("signupPassword").value,
+                college: document.getElementById("signupCollege").value,
+                branch: document.getElementById("signupBranch").value,
+                year: document.getElementById("signupYear").value
+            };
+            
+            // Check if passwords match
+            if (user.password !== document.getElementById("signupConfirmPassword").value) {
+                alert("Passwords don't match!");
+                return;
+            }
+            
+            // Check if email already exists
+            if (auth.users.some(u => u.email === user.email)) {
+                alert("Email already registered!");
+                return;
+            }
+            
+            // Add to users array
+            auth.users.push(user);
+            auth.saveUsers();
+            
+            // Log the user in
+            auth.login(user.email, user.password);
+            
+            // Close modal and refresh
+            signupModal.style.display = "none";
+            window.location.reload();
+        };
+
+        // Handle login form submission
+        document.getElementById("loginForm").onsubmit = (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+            
+            if (auth.login(email, password)) {
+                // Close modal and refresh
+                loginModal.style.display = "none";
+                window.location.reload();
+            } else {
+                alert("Invalid email or password");
+            }
+        };
+
+        // Mobile Navbar Toggle
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("active");
+        });
+
+        // Close navbar when a link is clicked (optional for better UX)
+        navLinks.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            hamburger.classList.remove("active");
+        });
+
+        // Update UI based on login status
+        document.addEventListener("DOMContentLoaded", function() {
+            if (auth.isLoggedIn()) {
+                const user = auth.getCurrentUser();
+                const fullName = `${user.firstName} ${user.lastName}`;
+                
+                // Update signup button to show user name
+                const signupBtn = document.getElementById("signup-btn");
+                signupBtn.textContent = fullName;
+                signupBtn.classList.add("user-profile");
+                
+                // Add logout option
+                signupBtn.onclick = (e) => {
+                    e.preventDefault();
+                    if (confirm("Are you sure you want to logout?")) {
+                        auth.logout();
+                        window.location.reload();
+                    }
+                };
+            }
+        });
+    </script>
+</body>
+</html>
